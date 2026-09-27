@@ -1,18 +1,8 @@
-# Dependencies cloned by setup.sh (not redistributed)
 Chrysalis-HLS/
 patmos_hls/
-cirfix-fpga-mut/
-cirfix-fpga
-
-# Generated benchmark directories (re-created by inject_bugs.py / build_rtl_meta.py)
 benchmarks/hls/*/
-benchmarks/rtl/*/
-
-# Python
 __pycache__/
 *.pyc
 *.pyo
 .env
-
-# OS
 .DS_Store
