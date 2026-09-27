@@ -35,15 +35,5 @@ repository at setup time and is **not** included in this artifact.
 
 ---
 
-## CirFix FPGA Benchmark
-
-**Repository:** https://github.com/hls-edu/cirfix-fpga-mut  
-**License:** See repository (MIT)  
-**Used for:** RTL buggy/correct Verilog pairs (CirFix subset, 31 instances)
-and Assignment4V Verilog pairs (59 instances), used to build the RTL
-benchmark.
-
----
-
 *If you use this artifact, please also cite the original Chrysalis-HLS and
 CHStone papers (see the paper's bibliography).*

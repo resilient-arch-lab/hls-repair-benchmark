@@ -30,7 +30,10 @@ CHSTONE_DIR = os.environ.get(
     "CHSTONE_DIR",
     os.path.expanduser("~/patmos_hls/benchmarks/CHStone")
 )
-OUTPUT_DIR = os.path.expanduser("~/iccd2026/benchmarks/hls")
+OUTPUT_DIR = os.environ.get(
+    "OUTPUT_DIR",
+    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "benchmarks", "hls")
+)
 
 # Each CHStone benchmark compiles via a single entry .c file that #includes the rest.
 # Compiling all *.c files directly causes duplicate-symbol errors.
