@@ -1,0 +1,1922 @@
+[
+  {
+    "name": "AddRoundKey_INF",
+    "function": "AddRoundKey",
+    "benchmark": "aes",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_INF/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "for (j = 0; j < nb; ++j)",
+    "faulty_code": "for (j = 0; ; ++j)"
+  },
+  {
+    "name": "AddRoundKey_MLU",
+    "function": "AddRoundKey",
+    "benchmark": "aes",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_MLU/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "for (j = 0; j < nb; ++j)",
+    "faulty_code": "for (j = 0; j < nb - 1; ++j)"
+  },
+  {
+    "name": "AddRoundKey_ZERO",
+    "function": "AddRoundKey",
+    "benchmark": "aes",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_ZERO/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_enc.c",
+    "original_code": "nb = 4;",
+    "faulty_code": "nb = 0;"
+  },
+  {
+    "name": "AddRoundKey_InversMixColumn_INF",
+    "function": "AddRoundKey_InversMixColumn",
+    "benchmark": "aes",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_INF/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "for (j = 0; j < nb; ++j)",
+    "faulty_code": "for (j = 0; ; ++j)"
+  },
+  {
+    "name": "AddRoundKey_InversMixColumn_OOB",
+    "function": "AddRoundKey_InversMixColumn",
+    "benchmark": "aes",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_OOB/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "statemt[j * 4] ^= word[0][j + nb * n];",
+    "faulty_code": "statemt[j * 4] ^= word[0][j + nb * (n+1)];"
+  },
+  {
+    "name": "AddRoundKey_InversMixColumn_USE",
+    "function": "AddRoundKey_InversMixColumn",
+    "benchmark": "aes",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_USE/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "if ((x >> 8) == 1)",
+    "faulty_code": "if ((x >> 8) < 0)"
+  },
+  {
+    "name": "BF_set_key_MLU",
+    "function": "BF_set_key",
+    "benchmark": "blowfish",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/BF_set_key_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/BF_set_key_MLU/correct",
+    "entry_file": "bf.c",
+    "target_file": "bf_skey.c",
+    "original_code": "for (i = 0; i < (BF_ROUNDS + 2); i += 2)",
+    "faulty_code": "for (i = 0; i <= (BF_ROUNDS + 2); i += 2)"
+  },
+  {
+    "name": "ByteSub_ShiftRow_OOB",
+    "function": "ByteSub_ShiftRow",
+    "benchmark": "aes",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ByteSub_ShiftRow_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ByteSub_ShiftRow_OOB/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "temp = Sbox[statemt[1] >> 4][statemt[1] & 0xf];",
+    "faulty_code": "temp = Sbox[statemt[1] >> 4][statemt[16] & 0xf];"
+  },
+  {
+    "name": "KeySchedule_OOB",
+    "function": "KeySchedule",
+    "benchmark": "aes",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/KeySchedule_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/KeySchedule_OOB/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_key.c",
+    "original_code": "word[i][j] = key[i + j * 4];",
+    "faulty_code": "word[i][j] = key[i + j * 5];"
+  },
+  {
+    "name": "MixColumn_AddRoundKey_INF",
+    "function": "MixColumn_AddRoundKey",
+    "benchmark": "aes",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_INF/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "for (j = 0; j < nb; ++j)",
+    "faulty_code": "for (j = 0; ; ++j)"
+  },
+  {
+    "name": "MixColumn_AddRoundKey_MLU",
+    "function": "MixColumn_AddRoundKey",
+    "benchmark": "aes",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_MLU/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "statemt[3 + j * 4] = ret[3 + j * 4];",
+    "faulty_code": "statemt[2 + j * 4] = ret[2 + j * 4];"
+  },
+  {
+    "name": "MixColumn_AddRoundKey_OOB",
+    "function": "MixColumn_AddRoundKey",
+    "benchmark": "aes",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_OOB/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "statemt[1 + j * 4] = ret[1 + j * 4];",
+    "faulty_code": "statemt[1 + j * 5] = ret[1 + j * 4];"
+  },
+  {
+    "name": "MixColumn_AddRoundKey_USE",
+    "function": "MixColumn_AddRoundKey",
+    "benchmark": "aes",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_USE/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_func.c",
+    "original_code": "ret[j * 4] = (statemt[j * 4] << 1);",
+    "faulty_code": "ret[j * 4] = (statemt[j * 4] << 1) >> 31;"
+  },
+  {
+    "name": "Reflection_coefficients_INF",
+    "function": "Reflection_coefficients",
+    "benchmark": "gsm",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_INF/correct",
+    "entry_file": "gsm.c",
+    "target_file": "lpc.c",
+    "original_code": "for (n = 1; n <= 8; n++, r++)",
+    "faulty_code": "for (n = 1; n >= 8; n++, r++)"
+  },
+  {
+    "name": "Reflection_coefficients_MLU",
+    "function": "Reflection_coefficients",
+    "benchmark": "gsm",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_MLU/correct",
+    "entry_file": "gsm.c",
+    "target_file": "lpc.c",
+    "original_code": "for (m = 1; m <= 8 - n; m++)",
+    "faulty_code": "for (m = 1; m < 8 - n; m++)"
+  },
+  {
+    "name": "Reflection_coefficients_SHFT",
+    "function": "Reflection_coefficients",
+    "benchmark": "gsm",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_SHFT/correct",
+    "entry_file": "gsm.c",
+    "target_file": "lpc.c",
+    "original_code": "ACF[i] = SASR (L_ACF[i] << temp, 16);",
+    "faulty_code": "ACF[i] = SASR (L_ACF[i] << (temp+16), 16);"
+  },
+  {
+    "name": "adpcm_main_MLU",
+    "function": "adpcm_main",
+    "benchmark": "adpcm",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_MLU/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "for (i = 0; i < 10; i++)",
+    "faulty_code": "for (i = 0; i <= 10; i++)"
+  },
+  {
+    "name": "adpcm_main_SHFT",
+    "function": "adpcm_main",
+    "benchmark": "adpcm",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_SHFT/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "decis = (564L * (long) deth) >> 12L;",
+    "faulty_code": "decis = (564L * (long) deth) >> 32L;"
+  },
+  {
+    "name": "adpcm_main_ZERO",
+    "function": "adpcm_main",
+    "benchmark": "adpcm",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_ZERO/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "dec_detl = scalel (dec_nbl, 8);",
+    "faulty_code": "dec_detl = scalel (dec_nbl, 0);"
+  },
+  {
+    "name": "aes_main_MLU",
+    "function": "aes_main",
+    "benchmark": "aes",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_MLU/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes.c",
+    "original_code": "encrypt (statemt, key, 128128);",
+    "faulty_code": "for (int i = 0; i < 15; ++i) statemt[i] = (i % 2) ? statemt[i] ^ key[i] : statemt[i];"
+  },
+  {
+    "name": "aes_main_OOB",
+    "function": "aes_main",
+    "benchmark": "aes",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_OOB/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes.c",
+    "original_code": "encrypt (statemt, key, 128128);",
+    "faulty_code": "encrypt (statemt, key, 128);"
+  },
+  {
+    "name": "aes_main_USE",
+    "function": "aes_main",
+    "benchmark": "aes",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_USE/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes.c",
+    "original_code": "encrypt (statemt, key, 128128);",
+    "faulty_code": "encrypt (statemt, key, 128);"
+  },
+  {
+    "name": "decode_INF",
+    "function": "decode",
+    "benchmark": "adpcm",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INF/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "for (i = 0; i < 10; i++)",
+    "faulty_code": "for (i = 0; ; i++)"
+  },
+  {
+    "name": "decode_INIT",
+    "function": "decode",
+    "benchmark": "adpcm",
+    "bug_type": "INIT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INIT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INIT/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;",
+    "faulty_code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;\n*tqmf_ptr-- = xin1;\n*tqmf_ptr = xin2;"
+  },
+  {
+    "name": "decode_MLU",
+    "function": "decode",
+    "benchmark": "adpcm",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_MLU/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;",
+    "faulty_code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;\n  *tqmf_ptr-- = xin1;\n  *tqmf_ptr = xin2;"
+  },
+  {
+    "name": "decrypt_BUF",
+    "function": "decrypt",
+    "benchmark": "aes",
+    "bug_type": "BUF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_BUF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_BUF/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_enc.c",
+    "original_code": "AddRoundKey (statemt, type, 0);",
+    "faulty_code": "AddRoundKey (statemt + nb, type, 0);"
+  },
+  {
+    "name": "decrypt_SHFT",
+    "function": "decrypt",
+    "benchmark": "aes",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_SHFT/correct",
+    "entry_file": "aes.c",
+    "target_file": "aes_dec.c",
+    "original_code": "for (i = round_val - 1; i >= 1; --i)",
+    "faulty_code": "for (i = round_val - 1; i >= 0; --i)"
+  },
+  {
+    "name": "encode_SHFT",
+    "function": "encode",
+    "benchmark": "adpcm",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_SHFT/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "ih = input >> 6;",
+    "faulty_code": "ih = input >> 32;"
+  },
+  {
+    "name": "encode_ZERO",
+    "function": "encode",
+    "benchmark": "adpcm",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_ZERO/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "dec_detl = scalel (dec_nbl, 8);",
+    "faulty_code": "dec_detl = 0;"
+  },
+  {
+    "name": "filtep_ZERO",
+    "function": "filtep",
+    "benchmark": "adpcm",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtep_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtep_ZERO/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "pl = 2 * rlt1;",
+    "faulty_code": "pl = 0;"
+  },
+  {
+    "name": "filtez_INF",
+    "function": "filtez",
+    "benchmark": "adpcm",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_INF/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "for (i = 1; i < 6; i++)",
+    "faulty_code": "for (i = 1; i != 6; i--)"
+  },
+  {
+    "name": "filtez_SHFT",
+    "function": "filtez",
+    "benchmark": "adpcm",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_SHFT/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "return ((int) (zl >> 14));",
+    "faulty_code": "return ((int) (zl >> 32));"
+  },
+  {
+    "name": "filtez_ZERO",
+    "function": "filtez",
+    "benchmark": "adpcm",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_ZERO/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "zl = (long) (*bpl++) * (*dlt++);",
+    "faulty_code": "zl = 0;"
+  },
+  {
+    "name": "float64_add_INF",
+    "function": "float64_add",
+    "benchmark": "dfadd",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_INF/correct",
+    "entry_file": "dfadd.c",
+    "target_file": "softfloat.c",
+    "original_code": "shift64RightJamming (bSig, expDiff, &bSig);",
+    "faulty_code": "while(true) { shift64RightJamming (bSig, expDiff, &bSig); }"
+  },
+  {
+    "name": "float64_add_SHFT",
+    "function": "float64_add",
+    "benchmark": "dfadd",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_SHFT/correct",
+    "entry_file": "dfadd.c",
+    "target_file": "softfloat.c",
+    "original_code": "shift64RightJamming (bSig, expDiff, &bSig);",
+    "faulty_code": "shift64RightJamming (bSig, expDiff+64, &bSig);"
+  },
+  {
+    "name": "gsm_add_SHFT",
+    "function": "gsm_add",
+    "benchmark": "gsm",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_add_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_add_SHFT/correct",
+    "entry_file": "gsm.c",
+    "target_file": "add.c",
+    "original_code": "return saturate (sum);",
+    "faulty_code": "return saturate (sum << 32); // Assuming 'word' is a 32-bit integer, this shift is out-of-bounds"
+  },
+  {
+    "name": "gsm_mult_r_ZERO",
+    "function": "gsm_mult_r",
+    "benchmark": "gsm",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_mult_r_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_mult_r_ZERO/correct",
+    "entry_file": "gsm.c",
+    "target_file": "add.c",
+    "original_code": "prod = (longword) a *(longword) b + 16384;",
+    "faulty_code": "prod = 0;"
+  },
+  {
+    "name": "logsch_OOB",
+    "function": "logsch",
+    "benchmark": "adpcm",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_OOB/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "nbh = wd + wh_code_table[ih];",
+    "faulty_code": "nbh = wd + wh_code_table[ih+1];"
+  },
+  {
+    "name": "logsch_ZERO",
+    "function": "logsch",
+    "benchmark": "adpcm",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_ZERO/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "nbh = wd + wh_code_table[ih];",
+    "faulty_code": "nbh = 0 + wh_code_table[ih];"
+  },
+  {
+    "name": "logscl_OOB",
+    "function": "logscl",
+    "benchmark": "adpcm",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logscl_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logscl_OOB/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "nbl = (int) wd + wl_code_table[il >> 2];",
+    "faulty_code": "nbl = (int) wd + wl_code_table[il];"
+  },
+  {
+    "name": "scalel_USE",
+    "function": "scalel",
+    "benchmark": "adpcm",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/scalel_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/scalel_USE/correct",
+    "entry_file": "adpcm.c",
+    "target_file": "adpcm.c",
+    "original_code": "wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);",
+    "faulty_code": "wd3 = ilb_table[wd1] >> (shift_constant - wd2);"
+  },
+  {
+    "name": "bbgemm_INF_bug_INF",
+    "suite": "machsuite",
+    "function": "bbgemm",
+    "kernel": "gemm/blocked",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_INF_bug_INF/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "loopk:for (k = 0; k < block_size; ++k)",
+    "faulty_code": "loopk:for (k = 0; k <= block_size; ++k)",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "bbgemm_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "bbgemm",
+    "kernel": "gemm/blocked",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_MLU_bug_MLU/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "for (k = 0; k < block_size; ++k){",
+    "faulty_code": "for (k = 0; k <= block_size; ++k){",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "bbgemm_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "bbgemm",
+    "kernel": "gemm/blocked",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_OOB_bug_OOB/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "temp_x = m1[i_row + k + kk];",
+    "faulty_code": "temp_x = m1[i_row + k];",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "bbgemm_USE_bug_USE",
+    "suite": "machsuite",
+    "function": "bbgemm",
+    "kernel": "gemm/blocked",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_USE_bug_USE/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "temp_x = m1[i_row + k + kk];",
+    "faulty_code": "temp_x = m1[i_row + k - kk];",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "bbgemm_ZERO_bug_ZERO",
+    "suite": "machsuite",
+    "function": "bbgemm",
+    "kernel": "gemm/blocked",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "for ( i = 0; i < row_size; ++i){",
+    "faulty_code": "for ( i = 0; i <= row_size; ++i){",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "bfs_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "bfs",
+    "kernel": "bfs/bulk",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_MLU_bug_MLU/correct",
+    "src_files": [
+      "bfs.c",
+      "local_support.c"
+    ],
+    "target_file": "bfs.c",
+    "original_code": "loop_neighbors: for( e=tmp_begin; e<tmp_end; e++ ) {",
+    "faulty_code": "loop_neighbors: for( e=tmp_begin; e<=tmp_end; e++ ) {",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c bfs.c local_support.c -lm"
+  },
+  {
+    "name": "bfs_ZERO_bug_ZERO",
+    "suite": "machsuite",
+    "function": "bfs",
+    "kernel": "bfs/bulk",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "bfs.c",
+      "local_support.c"
+    ],
+    "target_file": "bfs.c",
+    "original_code": "level[starting_node] = 0;",
+    "faulty_code": "level[starting_node] = 1;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c bfs.c local_support.c -lm"
+  },
+  {
+    "name": "bfs_1_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "bfs_1",
+    "kernel": "bfs/queue",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_OOB_bug_OOB/correct",
+    "src_files": [
+      "bfs.c",
+      "local_support.c"
+    ],
+    "target_file": "bfs.c",
+    "original_code": "level_counts[0] = 1;",
+    "faulty_code": "level_counts[N_LEVELS] = 1;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c bfs.c local_support.c -lm"
+  },
+  {
+    "name": "bfs_1_USE_bug_USE",
+    "suite": "machsuite",
+    "function": "bfs_1",
+    "kernel": "bfs/queue",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_USE_bug_USE/correct",
+    "src_files": [
+      "bfs.c",
+      "local_support.c"
+    ],
+    "target_file": "bfs.c",
+    "original_code": "level_t tmp_level = level[n]+1;",
+    "faulty_code": "level_t tmp_level = level[tmp_dst]+1;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c bfs.c local_support.c -lm"
+  },
+  {
+    "name": "gemm_INF_bug_INF",
+    "suite": "machsuite",
+    "function": "gemm",
+    "kernel": "gemm/ncubed",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INF_bug_INF/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "inner:for(k=0;k<row_size;k++)",
+    "faulty_code": "inner:for(k=0;k!=-1;k++)",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "gemm_INIT_bug_INIT",
+    "suite": "machsuite",
+    "function": "gemm",
+    "kernel": "gemm/ncubed",
+    "bug_type": "INIT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INIT_bug_INIT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INIT_bug_INIT/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "TYPE sum = 0;",
+    "faulty_code": "TYPE sum;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "gemm_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "gemm",
+    "kernel": "gemm/ncubed",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_MLU_bug_MLU/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "inner:for(k=0;k<row_size;k++) {",
+    "faulty_code": "inner:for(k=0;k<row_size-1;k++) {",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "gemm_ZERO_bug_ZERO",
+    "suite": "machsuite",
+    "function": "gemm",
+    "kernel": "gemm/ncubed",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "gemm.c",
+      "local_support.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "TYPE sum = 0;",
+    "faulty_code": "TYPE sum;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c gemm.c local_support.c -lm"
+  },
+  {
+    "name": "md_INF_bug_INF",
+    "suite": "machsuite",
+    "function": "md",
+    "kernel": "md/grid",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INF_bug_INF/correct",
+    "src_files": [
+      "md.c",
+      "local_support.c"
+    ],
+    "target_file": "md.c",
+    "original_code": "loop_q: for( q_idx=0; q_idx< q_idx_range ; q_idx++ )",
+    "faulty_code": "loop_q: for( q_idx=0; q_idx<= q_idx_range ; q_idx++ )",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c md.c local_support.c -lm"
+  },
+  {
+    "name": "md_INIT_bug_INIT",
+    "suite": "machsuite",
+    "function": "md",
+    "kernel": "md/grid",
+    "bug_type": "INIT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INIT_bug_INIT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INIT_bug_INIT/correct",
+    "src_files": [
+      "md.c",
+      "local_support.c"
+    ],
+    "target_file": "md.c",
+    "original_code": "TYPE sum_x = force[b0.x][b0.y][b0.z][p_idx].x;",
+    "faulty_code": "TYPE sum_x;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c md.c local_support.c -lm"
+  },
+  {
+    "name": "md_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "md",
+    "kernel": "md/grid",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_MLU_bug_MLU/correct",
+    "src_files": [
+      "md.c",
+      "local_support.c"
+    ],
+    "target_file": "md.c",
+    "original_code": "loop_grid1_x: for( b1.x=MAX(0,b0.x-1); b1.x<MIN(blockSide,b0.x+2); b1.x++ ) {",
+    "faulty_code": "loop_grid1_x: for( b1.x=MAX(0,b0.x-1); b1.x<=MIN(blockSide,b0.x+1); b1.x++ ) {",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c md.c local_support.c -lm"
+  },
+  {
+    "name": "md_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "md",
+    "kernel": "md/grid",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_OOB_bug_OOB/correct",
+    "src_files": [
+      "md.c",
+      "local_support.c"
+    ],
+    "target_file": "md.c",
+    "original_code": "q = *(base_q + q_idx);",
+    "faulty_code": "q = *(base_q + q_idx_range);",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c md.c local_support.c -lm"
+  },
+  {
+    "name": "md_ZERO_bug_ZERO",
+    "suite": "machsuite",
+    "function": "md",
+    "kernel": "md/grid",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "md.c",
+      "local_support.c"
+    ],
+    "target_file": "md.c",
+    "original_code": "TYPE sum_x = force[b0.x][b0.y][b0.z][p_idx].x;",
+    "faulty_code": "TYPE sum_x = 0;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c md.c local_support.c -lm"
+  },
+  {
+    "name": "merge_INIT_bug_INIT",
+    "suite": "machsuite",
+    "function": "merge",
+    "kernel": "sort/merge",
+    "bug_type": "INIT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_INIT_bug_INIT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_INIT_bug_INIT/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "merge_label1 : for(i=start; i<=m; i++){",
+    "faulty_code": "merge_label1 : for(i=start; i<m; i++){",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "merge_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "merge",
+    "kernel": "sort/merge",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_MLU_bug_MLU/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "merge_label1 : for(i=start; i<=m; i++){",
+    "faulty_code": "merge_label1 : for(i=start; i<m; i++){",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "merge_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "merge",
+    "kernel": "sort/merge",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_OOB_bug_OOB/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "temp[m+1+stop-j] = a[j];",
+    "faulty_code": "temp[SIZE-1-m+stop-j] = a[j];",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "ms_mergesort_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "ms_mergesort",
+    "kernel": "sort/merge",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ms_mergesort_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ms_mergesort_MLU_bug_MLU/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "mergesort_label1 : for(m=1; m<stop-start; m+=m) {",
+    "faulty_code": "mergesort_label1 : for(m=1; m<=stop-start; m+=m) {",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "ss_sort_INIT_bug_INIT",
+    "suite": "machsuite",
+    "function": "ss_sort",
+    "kernel": "sort/radix",
+    "bug_type": "INIT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_INIT_bug_INIT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_INIT_bug_INIT/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "int valid_buffer=0;",
+    "faulty_code": "int valid_buffer;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "ss_sort_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "ss_sort",
+    "kernel": "sort/radix",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_MLU_bug_MLU/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "hist_2 : for(i=0; i<4; i++) {",
+    "faulty_code": "hist_2 : for(i=0; i<3; i++) {",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "ss_sort_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "ss_sort",
+    "kernel": "sort/radix",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_OOB_bug_OOB/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;",
+    "faulty_code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "ss_sort_SHFT_bug_SHFT",
+    "suite": "machsuite",
+    "function": "ss_sort",
+    "kernel": "sort/radix",
+    "bug_type": "SHFT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_SHFT_bug_SHFT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_SHFT_bug_SHFT/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;",
+    "faulty_code": "bucket_indx = ((a[a_indx] >> (exp+33)) & 0x3)*NUMOFBLOCKS + blockID + 1;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "ss_sort_USE_bug_USE",
+    "suite": "machsuite",
+    "function": "ss_sort",
+    "kernel": "sort/radix",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_USE_bug_USE/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;",
+    "faulty_code": "bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "ss_sort_ZERO_bug_ZERO",
+    "suite": "machsuite",
+    "function": "ss_sort",
+    "kernel": "sort/radix",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "sort.c",
+      "local_support.c"
+    ],
+    "target_file": "sort.c",
+    "original_code": "sum[0] = 0;",
+    "faulty_code": "sum[1] = 0;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c sort.c local_support.c -lm"
+  },
+  {
+    "name": "stencil_INIT_bug_INIT",
+    "suite": "machsuite",
+    "function": "stencil",
+    "kernel": "stencil/stencil2d",
+    "bug_type": "INIT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_INIT_bug_INIT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_INIT_bug_INIT/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "temp = (TYPE)0;",
+    "faulty_code": "TYPE temp;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "stencil_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "stencil",
+    "kernel": "stencil/stencil2d",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_MLU_bug_MLU/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "stencil_label3:for (k1=0;k1<3;k1++){",
+    "faulty_code": "stencil_label3:for (k1=0;k1<2;k1++){",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "stencil_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "stencil",
+    "kernel": "stencil/stencil2d",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_OOB_bug_OOB/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "sol[(r*col_size) + c] = temp;",
+    "faulty_code": "sol[(r+1)*col_size + c+1] = temp;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "stencil_ZERO_bug_ZERO",
+    "suite": "machsuite",
+    "function": "stencil",
+    "kernel": "stencil/stencil2d",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "temp = (TYPE)0;",
+    "faulty_code": "temp = (TYPE)1;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "stencil3d_BUF_bug_BUF",
+    "suite": "machsuite",
+    "function": "stencil3d",
+    "kernel": "stencil/stencil3d",
+    "bug_type": "BUF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_BUF_bug_BUF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_BUF_bug_BUF/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "sum1 = orig[INDX(row_size, col_size, k, j, i + 1)] +",
+    "faulty_code": "sum1 = orig[INDX(row_size, col_size, k, j, i)] +",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "stencil3d_INF_bug_INF",
+    "suite": "machsuite",
+    "function": "stencil3d",
+    "kernel": "stencil/stencil3d",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_INF_bug_INF/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "for(i = 1; i < height_size - 1; i++)",
+    "faulty_code": "for(i = 1; i <= height_size - 1; i++)",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "stencil3d_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "stencil3d",
+    "kernel": "stencil/stencil3d",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_MLU_bug_MLU/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "loop_row : for(k = 1; k < row_size - 1; k++){",
+    "faulty_code": "loop_row : for(k = 1; k < row_size - 2; k++){",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "stencil3d_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "stencil3d",
+    "kernel": "stencil/stencil3d",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_OOB_bug_OOB/correct",
+    "src_files": [
+      "stencil.c",
+      "local_support.c"
+    ],
+    "target_file": "stencil.c",
+    "original_code": "sol[INDX(row_size, col_size, k, j, height_size-1)] = orig[INDX(row_size, col_size, k, j, height_size-1)];",
+    "faulty_code": "sol[INDX(row_size, col_size, k, j, height_size)] = orig[INDX(row_size, col_size, k, j, height_size)];",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c stencil.c local_support.c -lm"
+  },
+  {
+    "name": "viterbi_INF_bug_INF",
+    "suite": "machsuite",
+    "function": "viterbi",
+    "kernel": "viterbi/viterbi",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_INF_bug_INF/correct",
+    "src_files": [
+      "viterbi.c",
+      "local_support.c"
+    ],
+    "target_file": "viterbi.c",
+    "original_code": "L_backtrack: for( t=N_OBS-2; t>=0; t-- ) {",
+    "faulty_code": "L_backtrack: for( t=N_OBS-2; t>0; t-- ) {",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c viterbi.c local_support.c -lm"
+  },
+  {
+    "name": "viterbi_MLU_bug_MLU",
+    "suite": "machsuite",
+    "function": "viterbi",
+    "kernel": "viterbi/viterbi",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_MLU_bug_MLU/correct",
+    "src_files": [
+      "viterbi.c",
+      "local_support.c"
+    ],
+    "target_file": "viterbi.c",
+    "original_code": "L_backtrack: for( t=N_OBS-2; t>=0; t-- ) {",
+    "faulty_code": "L_backtrack: for( t=N_OBS-2; t>0; t-- ) {",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c viterbi.c local_support.c -lm"
+  },
+  {
+    "name": "viterbi_OOB_bug_OOB",
+    "suite": "machsuite",
+    "function": "viterbi",
+    "kernel": "viterbi/viterbi",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_OOB_bug_OOB/correct",
+    "src_files": [
+      "viterbi.c",
+      "local_support.c"
+    ],
+    "target_file": "viterbi.c",
+    "original_code": "llike[t][curr] = min_p;",
+    "faulty_code": "llike[t+1][curr] = min_p;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c viterbi.c local_support.c -lm"
+  },
+  {
+    "name": "viterbi_ZERO_bug_ZERO",
+    "suite": "machsuite",
+    "function": "viterbi",
+    "kernel": "viterbi/viterbi",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "viterbi.c",
+      "local_support.c"
+    ],
+    "target_file": "viterbi.c",
+    "original_code": "min_p = llike[N_OBS-1][min_s];",
+    "faulty_code": "min_p = 0;",
+    "compile_cmd": "gcc -O0 -I<common> <common>/support.c <common>/harness.c viterbi.c local_support.c -lm"
+  },
+  {
+    "name": "kernel_2mm_BUF_bug_BUF",
+    "suite": "polybench",
+    "function": "kernel_2mm",
+    "kernel": "linear-algebra/kernels/2mm/2mm.c",
+    "bug_type": "BUF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_BUF_bug_BUF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_BUF_bug_BUF/correct",
+    "src_files": [
+      "2mm.c"
+    ],
+    "target_file": "2mm.c",
+    "original_code": "D[i][j] += tmp[i][k] * C[k][j];",
+    "faulty_code": "D[i][j] += tmp[k][i] * C[k][j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_2mm_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_2mm",
+    "kernel": "linear-algebra/kernels/2mm/2mm.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_INF_bug_INF/correct",
+    "src_files": [
+      "2mm.c"
+    ],
+    "target_file": "2mm.c",
+    "original_code": "for (k = 0; k < _PB_NK; ++k)",
+    "faulty_code": "for (k = 0; k <= _PB_NK; ++k)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_2mm_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_2mm",
+    "kernel": "linear-algebra/kernels/2mm/2mm.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_MLU_bug_MLU/correct",
+    "src_files": [
+      "2mm.c"
+    ],
+    "target_file": "2mm.c",
+    "original_code": "for (k = 0; k < _PB_NK; ++k)",
+    "faulty_code": "for (k = 0; k < _PB_NK - 1; ++k)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_2mm_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_2mm",
+    "kernel": "linear-algebra/kernels/2mm/2mm.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_USE_bug_USE/correct",
+    "src_files": [
+      "2mm.c"
+    ],
+    "target_file": "2mm.c",
+    "original_code": "tmp[i][j] += alpha * A[i][k] * B[k][j];",
+    "faulty_code": "tmp[i][j] += alpha * A[i][k] * (short)B[k][j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_2mm_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_2mm",
+    "kernel": "linear-algebra/kernels/2mm/2mm.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "2mm.c"
+    ],
+    "target_file": "2mm.c",
+    "original_code": "D[i][j] *= beta;",
+    "faulty_code": "D[i][j] = 0;",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_3mm_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_3mm",
+    "kernel": "linear-algebra/kernels/3mm/3mm.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_INF_bug_INF/correct",
+    "src_files": [
+      "3mm.c"
+    ],
+    "target_file": "3mm.c",
+    "original_code": "for (k = 0; k < _PB_NK; ++k)",
+    "faulty_code": "for (k = 0; ; ++k)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_3mm_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_3mm",
+    "kernel": "linear-algebra/kernels/3mm/3mm.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_MLU_bug_MLU/correct",
+    "src_files": [
+      "3mm.c"
+    ],
+    "target_file": "3mm.c",
+    "original_code": "for (k = 0; k < _PB_NK; ++k)",
+    "faulty_code": "for (k = 0; k < _PB_NK - 1; ++k)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_3mm_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_3mm",
+    "kernel": "linear-algebra/kernels/3mm/3mm.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_USE_bug_USE/correct",
+    "src_files": [
+      "3mm.c"
+    ],
+    "target_file": "3mm.c",
+    "original_code": "E[i][j] += A[i][k] * B[k][j];",
+    "faulty_code": "E[i][j] += (short)A[i][k] * B[k][j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_bicg_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_bicg",
+    "kernel": "linear-algebra/kernels/bicg/bicg.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_bicg_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_bicg_USE_bug_USE/correct",
+    "src_files": [
+      "bicg.c"
+    ],
+    "target_file": "bicg.c",
+    "original_code": "s[j] = s[j] + r[i] * A[i][j];",
+    "faulty_code": "s[j] = s[j] + (int)(r[i] * A[i][j]);",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_correlation_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_correlation",
+    "kernel": "datamining/correlation/correlation.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_correlation_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_correlation_INF_bug_INF/correct",
+    "src_files": [
+      "correlation.c"
+    ],
+    "target_file": "correlation.c",
+    "original_code": "for (j = 0; j < _PB_M; j++)",
+    "faulty_code": "for (j = 0; ; j++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_covariance_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_covariance",
+    "kernel": "datamining/covariance/covariance.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_covariance_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_covariance_USE_bug_USE/correct",
+    "src_files": [
+      "covariance.c"
+    ],
+    "target_file": "covariance.c",
+    "original_code": "mean[j] += data[i][j];",
+    "faulty_code": "mean[j] += (int)data[i][j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_doitgen_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_doitgen",
+    "kernel": "linear-algebra/kernels/doitgen/doitgen.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_INF_bug_INF/correct",
+    "src_files": [
+      "doitgen.c"
+    ],
+    "target_file": "doitgen.c",
+    "original_code": "for (p = 0; p < _PB_NP; p++)",
+    "faulty_code": "for (p = 0; ; p++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_doitgen_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_doitgen",
+    "kernel": "linear-algebra/kernels/doitgen/doitgen.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_MLU_bug_MLU/correct",
+    "src_files": [
+      "doitgen.c"
+    ],
+    "target_file": "doitgen.c",
+    "original_code": "for (p = 0; p < _PB_NP; p++)",
+    "faulty_code": "for (p = 0; p < _PB_NP-1; p++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_durbin_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_durbin",
+    "kernel": "linear-algebra/solvers/durbin/durbin.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_durbin_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_durbin_INF_bug_INF/correct",
+    "src_files": [
+      "durbin.c"
+    ],
+    "target_file": "durbin.c",
+    "original_code": "for (k = 1; k < _PB_N; k++)",
+    "faulty_code": "for (k = 1; k != _PB_N; k--)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_fdtd_2d_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_fdtd_2d",
+    "kernel": "stencils/fdtd-2d/fdtd-2d.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INF_bug_INF/correct",
+    "src_files": [
+      "fdtd-2d.c"
+    ],
+    "target_file": "fdtd-2d.c",
+    "original_code": "for(t = 0; t < _PB_TMAX; t++)",
+    "faulty_code": "for(t = 0; t <= _PB_TMAX; t++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_fdtd_2d_INIT_bug_INIT",
+    "suite": "polybench",
+    "function": "kernel_fdtd_2d",
+    "kernel": "stencils/fdtd-2d/fdtd-2d.c",
+    "bug_type": "INIT",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INIT_bug_INIT/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INIT_bug_INIT/correct",
+    "src_files": [
+      "fdtd-2d.c"
+    ],
+    "target_file": "fdtd-2d.c",
+    "original_code": "for(t = 0; t < _PB_TMAX; t++)",
+    "faulty_code": "for(t = 1; t < _PB_TMAX; t++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_fdtd_2d_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_fdtd_2d",
+    "kernel": "stencils/fdtd-2d/fdtd-2d.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_MLU_bug_MLU/correct",
+    "src_files": [
+      "fdtd-2d.c"
+    ],
+    "target_file": "fdtd-2d.c",
+    "original_code": "for (i = 0; i < _PB_NX - 1; i++)",
+    "faulty_code": "for (i = 0; i <= _PB_NX - 1; i++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_fdtd_2d_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_fdtd_2d",
+    "kernel": "stencils/fdtd-2d/fdtd-2d.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "fdtd-2d.c"
+    ],
+    "target_file": "fdtd-2d.c",
+    "original_code": "ey[0][j] = _fict_[t];",
+    "faulty_code": "ey[0][j] = 0;",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemm_OOB_bug_OOB",
+    "suite": "polybench",
+    "function": "kernel_gemm",
+    "kernel": "linear-algebra/blas/gemm/gemm.c",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_OOB_bug_OOB/correct",
+    "src_files": [
+      "gemm.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "for (i = 0; i < _PB_NI; i++)",
+    "faulty_code": "for (i = 0; i <= _PB_NI; i++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemm_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_gemm",
+    "kernel": "linear-algebra/blas/gemm/gemm.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_USE_bug_USE/correct",
+    "src_files": [
+      "gemm.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "C[i][j] += alpha * A[i][k] * B[k][j];",
+    "faulty_code": "C[i][j] += alpha * (short)A[i][k] * B[k][j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemm_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_gemm",
+    "kernel": "linear-algebra/blas/gemm/gemm.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "gemm.c"
+    ],
+    "target_file": "gemm.c",
+    "original_code": "C[i][j] *= beta;",
+    "faulty_code": "C[i][j] = 0;",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemver_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_gemver",
+    "kernel": "linear-algebra/blas/gemver/gemver.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_INF_bug_INF/correct",
+    "src_files": [
+      "gemver.c"
+    ],
+    "target_file": "gemver.c",
+    "original_code": "for (i = 0; i < _PB_N; i++)",
+    "faulty_code": "for (i = 0; ; i++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemver_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_gemver",
+    "kernel": "linear-algebra/blas/gemver/gemver.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_MLU_bug_MLU/correct",
+    "src_files": [
+      "gemver.c"
+    ],
+    "target_file": "gemver.c",
+    "original_code": "for (j = 0; j < _PB_N; j++)",
+    "faulty_code": "for (j = 0; j < _PB_N - 1; j++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemver_OOB_bug_OOB",
+    "suite": "polybench",
+    "function": "kernel_gemver",
+    "kernel": "linear-algebra/blas/gemver/gemver.c",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_OOB_bug_OOB/correct",
+    "src_files": [
+      "gemver.c"
+    ],
+    "target_file": "gemver.c",
+    "original_code": "for (i = 0; i < _PB_N; i++)\n    for (j = 0; j < _PB_N; j++)\n      A[i][j] = A[i][j] + u1[i] * v1[j] + u2[i] * v2[j];",
+    "faulty_code": "for (i = 0; i <= _PB_N; i++)\n    for (j = 0; j <= _PB_N; j++)\n      A[i][j] = A[i][j] + u1[i] * v1[j] + u2[i] * v2[j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemver_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_gemver",
+    "kernel": "linear-algebra/blas/gemver/gemver.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_USE_bug_USE/correct",
+    "src_files": [
+      "gemver.c"
+    ],
+    "target_file": "gemver.c",
+    "original_code": "x[i] = x[i] + beta * A[j][i] * y[j];",
+    "faulty_code": "x[i] = x[i] + beta * A[j][i] * (short)y[j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gemver_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_gemver",
+    "kernel": "linear-algebra/blas/gemver/gemver.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "gemver.c"
+    ],
+    "target_file": "gemver.c",
+    "original_code": "for (i = 0; i < _PB_N; i++)\n    x[i] = x[i] + z[i];",
+    "faulty_code": "for (i = 0; i < _PB_N; i++)\n    x[i] = 0 + z[i];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gesummv_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_gesummv",
+    "kernel": "linear-algebra/blas/gesummv/gesummv.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_MLU_bug_MLU/correct",
+    "src_files": [
+      "gesummv.c"
+    ],
+    "target_file": "gesummv.c",
+    "original_code": "for (j = 0; j < _PB_N; j++)",
+    "faulty_code": "for (j = 0; j < _PB_N - 1; j++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gesummv_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_gesummv",
+    "kernel": "linear-algebra/blas/gesummv/gesummv.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_USE_bug_USE/correct",
+    "src_files": [
+      "gesummv.c"
+    ],
+    "target_file": "gesummv.c",
+    "original_code": "tmp[i] = A[i][j] * x[j] + tmp[i];",
+    "faulty_code": "tmp[i] = (short)(A[i][j] * x[j]) + tmp[i];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gesummv_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_gesummv",
+    "kernel": "linear-algebra/blas/gesummv/gesummv.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "gesummv.c"
+    ],
+    "target_file": "gesummv.c",
+    "original_code": "y[i] = alpha * tmp[i] + beta * y[i];",
+    "faulty_code": "y[i] = 0;",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_gramschmidt_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_gramschmidt",
+    "kernel": "linear-algebra/solvers/gramschmidt/gramschmidt.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gramschmidt_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gramschmidt_USE_bug_USE/correct",
+    "src_files": [
+      "gramschmidt.c"
+    ],
+    "target_file": "gramschmidt.c",
+    "original_code": "nrm += A[i][k] * A[i][k];",
+    "faulty_code": "nrm += (short)A[i][k] * A[i][k];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_1d_imper_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_jacobi_1d_imper",
+    "kernel": "stencils/jacobi-1d/jacobi-1d.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_INF_bug_INF/correct",
+    "src_files": [
+      "jacobi-1d.c"
+    ],
+    "target_file": "jacobi-1d.c",
+    "original_code": "for (t = 0; t < _PB_TSTEPS; t++)",
+    "faulty_code": "for (t = 0; t != _PB_TSTEPS; t--)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_1d_imper_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_jacobi_1d_imper",
+    "kernel": "stencils/jacobi-1d/jacobi-1d.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_MLU_bug_MLU/correct",
+    "src_files": [
+      "jacobi-1d.c"
+    ],
+    "target_file": "jacobi-1d.c",
+    "original_code": "for (i = 1; i < _PB_N - 1; i++)",
+    "faulty_code": "for (i = 1; i <= _PB_N - 2; i += 2)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_1d_imper_OOB_bug_OOB",
+    "suite": "polybench",
+    "function": "kernel_jacobi_1d_imper",
+    "kernel": "stencils/jacobi-1d/jacobi-1d.c",
+    "bug_type": "OOB",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_OOB_bug_OOB/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_OOB_bug_OOB/correct",
+    "src_files": [
+      "jacobi-1d.c"
+    ],
+    "target_file": "jacobi-1d.c",
+    "original_code": "for (i = 1; i < _PB_N - 1; i++)\n\tB[i] = 0.33333 * (A[i-1] + A[i] + A[i + 1]);",
+    "faulty_code": "for (i = 1; i <= _PB_N - 1; i++)\n\tB[i] = 0.33333 * (A[i-1] + A[i] + A[i + 1]);",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_1d_imper_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_jacobi_1d_imper",
+    "kernel": "stencils/jacobi-1d/jacobi-1d.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_USE_bug_USE/correct",
+    "src_files": [
+      "jacobi-1d.c"
+    ],
+    "target_file": "jacobi-1d.c",
+    "original_code": "B[i] = 0.33333 * (A[i-1] + A[i] + A[i + 1]);",
+    "faulty_code": "B[i] = 0.33333 * ((short)(A[i-1] + A[i] + A[i + 1]));",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_1d_imper_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_jacobi_1d_imper",
+    "kernel": "stencils/jacobi-1d/jacobi-1d.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "jacobi-1d.c"
+    ],
+    "target_file": "jacobi-1d.c",
+    "original_code": "B[i] = 0.33333 * (A[i-1] + A[i] + A[i + 1]);",
+    "faulty_code": "B[i] = 0 * (A[i-1] + A[i] + A[i + 1]);",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_2d_imper_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_jacobi_2d_imper",
+    "kernel": "stencils/jacobi-2d/jacobi-2d.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_INF_bug_INF/correct",
+    "src_files": [
+      "jacobi-2d.c"
+    ],
+    "target_file": "jacobi-2d.c",
+    "original_code": "for (i = 1; i < _PB_N - 1; i++)",
+    "faulty_code": "for (i = 1; ; i++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_2d_imper_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_jacobi_2d_imper",
+    "kernel": "stencils/jacobi-2d/jacobi-2d.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_MLU_bug_MLU/correct",
+    "src_files": [
+      "jacobi-2d.c"
+    ],
+    "target_file": "jacobi-2d.c",
+    "original_code": "for (j = 1; j < _PB_N - 1; j++)",
+    "faulty_code": "for (j = 1; j <= _PB_N - 2; j += 2)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_jacobi_2d_imper_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_jacobi_2d_imper",
+    "kernel": "stencils/jacobi-2d/jacobi-2d.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "jacobi-2d.c"
+    ],
+    "target_file": "jacobi-2d.c",
+    "original_code": "for (t = 0; t < _PB_TSTEPS; t++)",
+    "faulty_code": "for (t = 1; t < _PB_TSTEPS; t++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_mvt_INF_bug_INF",
+    "suite": "polybench",
+    "function": "kernel_mvt",
+    "kernel": "linear-algebra/kernels/mvt/mvt.c",
+    "bug_type": "INF",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_INF_bug_INF/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_INF_bug_INF/correct",
+    "src_files": [
+      "mvt.c"
+    ],
+    "target_file": "mvt.c",
+    "original_code": "for (i = 0; i < _PB_N; i++)",
+    "faulty_code": "for (i = 0; ; i++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_mvt_MLU_bug_MLU",
+    "suite": "polybench",
+    "function": "kernel_mvt",
+    "kernel": "linear-algebra/kernels/mvt/mvt.c",
+    "bug_type": "MLU",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_MLU_bug_MLU/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_MLU_bug_MLU/correct",
+    "src_files": [
+      "mvt.c"
+    ],
+    "target_file": "mvt.c",
+    "original_code": "for (j = 0; j < _PB_N; j++)",
+    "faulty_code": "for (j = 0; j < _PB_N - 1; j++)",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_mvt_USE_bug_USE",
+    "suite": "polybench",
+    "function": "kernel_mvt",
+    "kernel": "linear-algebra/kernels/mvt/mvt.c",
+    "bug_type": "USE",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_USE_bug_USE/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_USE_bug_USE/correct",
+    "src_files": [
+      "mvt.c"
+    ],
+    "target_file": "mvt.c",
+    "original_code": "x1[i] = x1[i] + A[i][j] * y_1[j];",
+    "faulty_code": "x1[i] = x1[i] + A[i][j] * (short)y_1[j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_mvt_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_mvt",
+    "kernel": "linear-algebra/kernels/mvt/mvt.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "mvt.c"
+    ],
+    "target_file": "mvt.c",
+    "original_code": "x1[i] = x1[i] + A[i][j] * y_1[j];",
+    "faulty_code": "x1[i] = 0 + A[i][j] * y_1[j];",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_syr2k_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_syr2k",
+    "kernel": "linear-algebra/blas/syr2k/syr2k.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syr2k_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syr2k_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "syr2k.c"
+    ],
+    "target_file": "syr2k.c",
+    "original_code": "C[i][j] *= beta;",
+    "faulty_code": "C[i][j] = 0;",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  },
+  {
+    "name": "kernel_syrk_ZERO_bug_ZERO",
+    "suite": "polybench",
+    "function": "kernel_syrk",
+    "kernel": "linear-algebra/blas/syrk/syrk.c",
+    "bug_type": "ZERO",
+    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syrk_ZERO_bug_ZERO/buggy",
+    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syrk_ZERO_bug_ZERO/correct",
+    "src_files": [
+      "syrk.c"
+    ],
+    "target_file": "syrk.c",
+    "original_code": "C[i][j] *= beta;",
+    "faulty_code": "C[i][j] = 0;",
+    "utils_dir": "/home/mmastora6051/polybench/utilities",
+    "compile_flags": "-DPOLYBENCH_DUMP_ARRAYS"
+  }
+]
