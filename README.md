@@ -40,7 +40,7 @@ can be validated by compile-and-run, with no testbench authorship required.
 - `gcc` (HLS oracle)
 - `git`
 - `pip install openai` (for the repair scripts)
-- An OpenAI API key (`export OPENAI_API_KEY=sk-...`)
+- An OpenAI API key (`export OPENAI_API_KEY=sk-...`) (Reproducing from pre-built results does not require this.)
 
 ---
 
