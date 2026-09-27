@@ -46,6 +46,28 @@ can be validated by compile-and-run, with no testbench authorship required.
 
 ## Quick start
 
+## Reproducing from pre-built results
+
+The `results/` directory contains the exact JSON outputs from our GPT-4o
+runs (September 2026). To reproduce the paper's statistics without re-running
+the LLM:
+
+```python
+import json, numpy as np
+
+hls = json.load(open("results/hls_results_full.json"))
+
+hls_rates = [r["repair_success_rate"] for r in hls if "repair_success_rate" in r]
+hls_mult  = [r["solution_multiplicity"] for r in hls if "solution_multiplicity" in r]
+
+print("Repair rate:          ", f"{sum(hls_rates)/len(hls_rates):.3f}")
+print("Solution multiplicity:", f"{sum(hls_mult)/len(hls_mult):.3f}")
+print("Instances:            ", len(hls_rates))
+```
+
+---
+##Creating repair using APIs
+
 ```bash
 # 1. Clone this repo
 git clone https://github.com/mmastora933/hls-repair-benchmark.git
@@ -136,26 +158,6 @@ a direction for future work (mutation-aware test generation).
 
 ---
 
-## Reproducing from pre-built results
-
-The `results/` directory contains the exact JSON outputs from our GPT-4o
-runs (September 2025). To reproduce the paper's statistics without re-running
-the LLM:
-
-```python
-import json, numpy as np
-
-hls = json.load(open("results/hls_results_full.json"))
-
-hls_rates = [r["repair_success_rate"] for r in hls if "repair_success_rate" in r]
-hls_mult  = [r["solution_multiplicity"] for r in hls if "solution_multiplicity" in r]
-
-print("Repair rate:          ", f"{sum(hls_rates)/len(hls_rates):.3f}")
-print("Solution multiplicity:", f"{sum(hls_mult)/len(hls_mult):.3f}")
-print("Instances:            ", len(hls_rates))
-```
-
----
 
 ## Citation
 
