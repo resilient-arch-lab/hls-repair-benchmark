@@ -1,3 +1,4 @@
+
 """
 validate_hls.py — Execution-based oracle for HLS patch validation.
 
@@ -33,7 +34,7 @@ def validate_patch(patch_code: str, instance_meta: dict, timeout: int = 10) -> d
 
     with tempfile.TemporaryDirectory() as tmpdir:
         # Copy the full buggy directory so all includes/helpers are present
-        shutil.copytree(instance_meta["buggy_dir"], tmpdir, dirs_exist_ok=True)
+        shutil.copytree(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), instance_meta["buggy_dir"]) if not os.path.isabs(instance_meta["buggy_dir"]) else instance_meta["buggy_dir"], tmpdir, dirs_exist_ok=True)
 
         # Replace the target file with the LLM patch
         target_path = os.path.join(tmpdir, instance_meta["target_file"])

@@ -4,8 +4,8 @@
     "function": "AddRoundKey",
     "benchmark": "aes",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_INF/correct",
+    "buggy_dir": "benchmarks/hls/AddRoundKey_INF/buggy",
+    "correct_dir": "benchmarks/hls/AddRoundKey_INF/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "for (j = 0; j < nb; ++j)",
@@ -16,8 +16,8 @@
     "function": "AddRoundKey",
     "benchmark": "aes",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_MLU/correct",
+    "buggy_dir": "benchmarks/hls/AddRoundKey_MLU/buggy",
+    "correct_dir": "benchmarks/hls/AddRoundKey_MLU/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "for (j = 0; j < nb; ++j)",
@@ -28,8 +28,8 @@
     "function": "AddRoundKey",
     "benchmark": "aes",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/AddRoundKey_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/AddRoundKey_ZERO/correct",
     "entry_file": "aes.c",
     "target_file": "aes_enc.c",
     "original_code": "nb = 4;",
@@ -40,8 +40,8 @@
     "function": "AddRoundKey_InversMixColumn",
     "benchmark": "aes",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_INF/correct",
+    "buggy_dir": "benchmarks/hls/AddRoundKey_InversMixColumn_INF/buggy",
+    "correct_dir": "benchmarks/hls/AddRoundKey_InversMixColumn_INF/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "for (j = 0; j < nb; ++j)",
@@ -52,8 +52,8 @@
     "function": "AddRoundKey_InversMixColumn",
     "benchmark": "aes",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_OOB/correct",
+    "buggy_dir": "benchmarks/hls/AddRoundKey_InversMixColumn_OOB/buggy",
+    "correct_dir": "benchmarks/hls/AddRoundKey_InversMixColumn_OOB/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "statemt[j * 4] ^= word[0][j + nb * n];",
@@ -64,8 +64,8 @@
     "function": "AddRoundKey_InversMixColumn",
     "benchmark": "aes",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/AddRoundKey_InversMixColumn_USE/correct",
+    "buggy_dir": "benchmarks/hls/AddRoundKey_InversMixColumn_USE/buggy",
+    "correct_dir": "benchmarks/hls/AddRoundKey_InversMixColumn_USE/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "if ((x >> 8) == 1)",
@@ -76,8 +76,8 @@
     "function": "BF_set_key",
     "benchmark": "blowfish",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/BF_set_key_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/BF_set_key_MLU/correct",
+    "buggy_dir": "benchmarks/hls/BF_set_key_MLU/buggy",
+    "correct_dir": "benchmarks/hls/BF_set_key_MLU/correct",
     "entry_file": "bf.c",
     "target_file": "bf_skey.c",
     "original_code": "for (i = 0; i < (BF_ROUNDS + 2); i += 2)",
@@ -88,8 +88,8 @@
     "function": "ByteSub_ShiftRow",
     "benchmark": "aes",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ByteSub_ShiftRow_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ByteSub_ShiftRow_OOB/correct",
+    "buggy_dir": "benchmarks/hls/ByteSub_ShiftRow_OOB/buggy",
+    "correct_dir": "benchmarks/hls/ByteSub_ShiftRow_OOB/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "temp = Sbox[statemt[1] >> 4][statemt[1] & 0xf];",
@@ -100,8 +100,8 @@
     "function": "KeySchedule",
     "benchmark": "aes",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/KeySchedule_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/KeySchedule_OOB/correct",
+    "buggy_dir": "benchmarks/hls/KeySchedule_OOB/buggy",
+    "correct_dir": "benchmarks/hls/KeySchedule_OOB/correct",
     "entry_file": "aes.c",
     "target_file": "aes_key.c",
     "original_code": "word[i][j] = key[i + j * 4];",
@@ -112,8 +112,8 @@
     "function": "MixColumn_AddRoundKey",
     "benchmark": "aes",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_INF/correct",
+    "buggy_dir": "benchmarks/hls/MixColumn_AddRoundKey_INF/buggy",
+    "correct_dir": "benchmarks/hls/MixColumn_AddRoundKey_INF/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "for (j = 0; j < nb; ++j)",
@@ -124,8 +124,8 @@
     "function": "MixColumn_AddRoundKey",
     "benchmark": "aes",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_MLU/correct",
+    "buggy_dir": "benchmarks/hls/MixColumn_AddRoundKey_MLU/buggy",
+    "correct_dir": "benchmarks/hls/MixColumn_AddRoundKey_MLU/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "statemt[3 + j * 4] = ret[3 + j * 4];",
@@ -136,8 +136,8 @@
     "function": "MixColumn_AddRoundKey",
     "benchmark": "aes",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_OOB/correct",
+    "buggy_dir": "benchmarks/hls/MixColumn_AddRoundKey_OOB/buggy",
+    "correct_dir": "benchmarks/hls/MixColumn_AddRoundKey_OOB/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "statemt[1 + j * 4] = ret[1 + j * 4];",
@@ -148,8 +148,8 @@
     "function": "MixColumn_AddRoundKey",
     "benchmark": "aes",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/MixColumn_AddRoundKey_USE/correct",
+    "buggy_dir": "benchmarks/hls/MixColumn_AddRoundKey_USE/buggy",
+    "correct_dir": "benchmarks/hls/MixColumn_AddRoundKey_USE/correct",
     "entry_file": "aes.c",
     "target_file": "aes_func.c",
     "original_code": "ret[j * 4] = (statemt[j * 4] << 1);",
@@ -160,8 +160,8 @@
     "function": "Reflection_coefficients",
     "benchmark": "gsm",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_INF/correct",
+    "buggy_dir": "benchmarks/hls/Reflection_coefficients_INF/buggy",
+    "correct_dir": "benchmarks/hls/Reflection_coefficients_INF/correct",
     "entry_file": "gsm.c",
     "target_file": "lpc.c",
     "original_code": "for (n = 1; n <= 8; n++, r++)",
@@ -172,8 +172,8 @@
     "function": "Reflection_coefficients",
     "benchmark": "gsm",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_MLU/correct",
+    "buggy_dir": "benchmarks/hls/Reflection_coefficients_MLU/buggy",
+    "correct_dir": "benchmarks/hls/Reflection_coefficients_MLU/correct",
     "entry_file": "gsm.c",
     "target_file": "lpc.c",
     "original_code": "for (m = 1; m <= 8 - n; m++)",
@@ -184,8 +184,8 @@
     "function": "Reflection_coefficients",
     "benchmark": "gsm",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/Reflection_coefficients_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/Reflection_coefficients_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/Reflection_coefficients_SHFT/correct",
     "entry_file": "gsm.c",
     "target_file": "lpc.c",
     "original_code": "ACF[i] = SASR (L_ACF[i] << temp, 16);",
@@ -196,8 +196,8 @@
     "function": "adpcm_main",
     "benchmark": "adpcm",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_MLU/correct",
+    "buggy_dir": "benchmarks/hls/adpcm_main_MLU/buggy",
+    "correct_dir": "benchmarks/hls/adpcm_main_MLU/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "for (i = 0; i < 10; i++)",
@@ -208,8 +208,8 @@
     "function": "adpcm_main",
     "benchmark": "adpcm",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/adpcm_main_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/adpcm_main_SHFT/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "decis = (564L * (long) deth) >> 12L;",
@@ -220,8 +220,8 @@
     "function": "adpcm_main",
     "benchmark": "adpcm",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/adpcm_main_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/adpcm_main_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/adpcm_main_ZERO/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "dec_detl = scalel (dec_nbl, 8);",
@@ -232,8 +232,8 @@
     "function": "aes_main",
     "benchmark": "aes",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_MLU/correct",
+    "buggy_dir": "benchmarks/hls/aes_main_MLU/buggy",
+    "correct_dir": "benchmarks/hls/aes_main_MLU/correct",
     "entry_file": "aes.c",
     "target_file": "aes.c",
     "original_code": "encrypt (statemt, key, 128128);",
@@ -244,8 +244,8 @@
     "function": "aes_main",
     "benchmark": "aes",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_OOB/correct",
+    "buggy_dir": "benchmarks/hls/aes_main_OOB/buggy",
+    "correct_dir": "benchmarks/hls/aes_main_OOB/correct",
     "entry_file": "aes.c",
     "target_file": "aes.c",
     "original_code": "encrypt (statemt, key, 128128);",
@@ -256,8 +256,8 @@
     "function": "aes_main",
     "benchmark": "aes",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/aes_main_USE/correct",
+    "buggy_dir": "benchmarks/hls/aes_main_USE/buggy",
+    "correct_dir": "benchmarks/hls/aes_main_USE/correct",
     "entry_file": "aes.c",
     "target_file": "aes.c",
     "original_code": "encrypt (statemt, key, 128128);",
@@ -268,8 +268,8 @@
     "function": "decode",
     "benchmark": "adpcm",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INF/correct",
+    "buggy_dir": "benchmarks/hls/decode_INF/buggy",
+    "correct_dir": "benchmarks/hls/decode_INF/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "for (i = 0; i < 10; i++)",
@@ -280,8 +280,8 @@
     "function": "decode",
     "benchmark": "adpcm",
     "bug_type": "INIT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INIT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_INIT/correct",
+    "buggy_dir": "benchmarks/hls/decode_INIT/buggy",
+    "correct_dir": "benchmarks/hls/decode_INIT/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;",
@@ -292,8 +292,8 @@
     "function": "decode",
     "benchmark": "adpcm",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decode_MLU/correct",
+    "buggy_dir": "benchmarks/hls/decode_MLU/buggy",
+    "correct_dir": "benchmarks/hls/decode_MLU/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;",
@@ -304,8 +304,8 @@
     "function": "decrypt",
     "benchmark": "aes",
     "bug_type": "BUF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_BUF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_BUF/correct",
+    "buggy_dir": "benchmarks/hls/decrypt_BUF/buggy",
+    "correct_dir": "benchmarks/hls/decrypt_BUF/correct",
     "entry_file": "aes.c",
     "target_file": "aes_enc.c",
     "original_code": "AddRoundKey (statemt, type, 0);",
@@ -316,8 +316,8 @@
     "function": "decrypt",
     "benchmark": "aes",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/decrypt_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/decrypt_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/decrypt_SHFT/correct",
     "entry_file": "aes.c",
     "target_file": "aes_dec.c",
     "original_code": "for (i = round_val - 1; i >= 1; --i)",
@@ -328,8 +328,8 @@
     "function": "encode",
     "benchmark": "adpcm",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/encode_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/encode_SHFT/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "ih = input >> 6;",
@@ -340,8 +340,8 @@
     "function": "encode",
     "benchmark": "adpcm",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/encode_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/encode_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/encode_ZERO/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "dec_detl = scalel (dec_nbl, 8);",
@@ -352,8 +352,8 @@
     "function": "filtep",
     "benchmark": "adpcm",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtep_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtep_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/filtep_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/filtep_ZERO/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "pl = 2 * rlt1;",
@@ -364,8 +364,8 @@
     "function": "filtez",
     "benchmark": "adpcm",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_INF/correct",
+    "buggy_dir": "benchmarks/hls/filtez_INF/buggy",
+    "correct_dir": "benchmarks/hls/filtez_INF/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "for (i = 1; i < 6; i++)",
@@ -376,8 +376,8 @@
     "function": "filtez",
     "benchmark": "adpcm",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/filtez_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/filtez_SHFT/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "return ((int) (zl >> 14));",
@@ -388,8 +388,8 @@
     "function": "filtez",
     "benchmark": "adpcm",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/filtez_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/filtez_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/filtez_ZERO/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "zl = (long) (*bpl++) * (*dlt++);",
@@ -400,8 +400,8 @@
     "function": "float64_add",
     "benchmark": "dfadd",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_INF/correct",
+    "buggy_dir": "benchmarks/hls/float64_add_INF/buggy",
+    "correct_dir": "benchmarks/hls/float64_add_INF/correct",
     "entry_file": "dfadd.c",
     "target_file": "softfloat.c",
     "original_code": "shift64RightJamming (bSig, expDiff, &bSig);",
@@ -412,8 +412,8 @@
     "function": "float64_add",
     "benchmark": "dfadd",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/float64_add_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/float64_add_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/float64_add_SHFT/correct",
     "entry_file": "dfadd.c",
     "target_file": "softfloat.c",
     "original_code": "shift64RightJamming (bSig, expDiff, &bSig);",
@@ -424,8 +424,8 @@
     "function": "gsm_add",
     "benchmark": "gsm",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_add_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_add_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/gsm_add_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/gsm_add_SHFT/correct",
     "entry_file": "gsm.c",
     "target_file": "add.c",
     "original_code": "return saturate (sum);",
@@ -436,8 +436,8 @@
     "function": "gsm_mult_r",
     "benchmark": "gsm",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_mult_r_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gsm_mult_r_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/gsm_mult_r_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/gsm_mult_r_ZERO/correct",
     "entry_file": "gsm.c",
     "target_file": "add.c",
     "original_code": "prod = (longword) a *(longword) b + 16384;",
@@ -448,8 +448,8 @@
     "function": "logsch",
     "benchmark": "adpcm",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_OOB/correct",
+    "buggy_dir": "benchmarks/hls/logsch_OOB/buggy",
+    "correct_dir": "benchmarks/hls/logsch_OOB/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "nbh = wd + wh_code_table[ih];",
@@ -460,8 +460,8 @@
     "function": "logsch",
     "benchmark": "adpcm",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logsch_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/logsch_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/logsch_ZERO/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "nbh = wd + wh_code_table[ih];",
@@ -472,8 +472,8 @@
     "function": "logscl",
     "benchmark": "adpcm",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logscl_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/logscl_OOB/correct",
+    "buggy_dir": "benchmarks/hls/logscl_OOB/buggy",
+    "correct_dir": "benchmarks/hls/logscl_OOB/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "nbl = (int) wd + wl_code_table[il >> 2];",
@@ -484,8 +484,8 @@
     "function": "scalel",
     "benchmark": "adpcm",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/scalel_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/scalel_USE/correct",
+    "buggy_dir": "benchmarks/hls/scalel_USE/buggy",
+    "correct_dir": "benchmarks/hls/scalel_USE/correct",
     "entry_file": "adpcm.c",
     "target_file": "adpcm.c",
     "original_code": "wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);",
@@ -497,8 +497,8 @@
     "function": "bbgemm",
     "kernel": "gemm/blocked",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/bbgemm_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/bbgemm_INF_bug_INF/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -514,8 +514,8 @@
     "function": "bbgemm",
     "kernel": "gemm/blocked",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/bbgemm_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/bbgemm_MLU_bug_MLU/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -531,8 +531,8 @@
     "function": "bbgemm",
     "kernel": "gemm/blocked",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/bbgemm_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/bbgemm_OOB_bug_OOB/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -548,8 +548,8 @@
     "function": "bbgemm",
     "kernel": "gemm/blocked",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/bbgemm_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/bbgemm_USE_bug_USE/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -565,8 +565,8 @@
     "function": "bbgemm",
     "kernel": "gemm/blocked",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bbgemm_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/bbgemm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/bbgemm_ZERO_bug_ZERO/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -582,8 +582,8 @@
     "function": "bfs",
     "kernel": "bfs/bulk",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/bfs_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/bfs_MLU_bug_MLU/correct",
     "src_files": [
       "bfs.c",
       "local_support.c"
@@ -599,8 +599,8 @@
     "function": "bfs",
     "kernel": "bfs/bulk",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/bfs_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/bfs_ZERO_bug_ZERO/correct",
     "src_files": [
       "bfs.c",
       "local_support.c"
@@ -616,8 +616,8 @@
     "function": "bfs_1",
     "kernel": "bfs/queue",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/bfs_1_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/bfs_1_OOB_bug_OOB/correct",
     "src_files": [
       "bfs.c",
       "local_support.c"
@@ -633,8 +633,8 @@
     "function": "bfs_1",
     "kernel": "bfs/queue",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/bfs_1_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/bfs_1_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/bfs_1_USE_bug_USE/correct",
     "src_files": [
       "bfs.c",
       "local_support.c"
@@ -650,8 +650,8 @@
     "function": "gemm",
     "kernel": "gemm/ncubed",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/gemm_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/gemm_INF_bug_INF/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -667,8 +667,8 @@
     "function": "gemm",
     "kernel": "gemm/ncubed",
     "bug_type": "INIT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INIT_bug_INIT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_INIT_bug_INIT/correct",
+    "buggy_dir": "benchmarks/hls/gemm_INIT_bug_INIT/buggy",
+    "correct_dir": "benchmarks/hls/gemm_INIT_bug_INIT/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -684,8 +684,8 @@
     "function": "gemm",
     "kernel": "gemm/ncubed",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/gemm_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/gemm_MLU_bug_MLU/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -701,8 +701,8 @@
     "function": "gemm",
     "kernel": "gemm/ncubed",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/gemm_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/gemm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/gemm_ZERO_bug_ZERO/correct",
     "src_files": [
       "gemm.c",
       "local_support.c"
@@ -718,8 +718,8 @@
     "function": "md",
     "kernel": "md/grid",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/md_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/md_INF_bug_INF/correct",
     "src_files": [
       "md.c",
       "local_support.c"
@@ -735,8 +735,8 @@
     "function": "md",
     "kernel": "md/grid",
     "bug_type": "INIT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INIT_bug_INIT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_INIT_bug_INIT/correct",
+    "buggy_dir": "benchmarks/hls/md_INIT_bug_INIT/buggy",
+    "correct_dir": "benchmarks/hls/md_INIT_bug_INIT/correct",
     "src_files": [
       "md.c",
       "local_support.c"
@@ -752,8 +752,8 @@
     "function": "md",
     "kernel": "md/grid",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/md_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/md_MLU_bug_MLU/correct",
     "src_files": [
       "md.c",
       "local_support.c"
@@ -769,8 +769,8 @@
     "function": "md",
     "kernel": "md/grid",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/md_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/md_OOB_bug_OOB/correct",
     "src_files": [
       "md.c",
       "local_support.c"
@@ -786,8 +786,8 @@
     "function": "md",
     "kernel": "md/grid",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/md_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/md_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/md_ZERO_bug_ZERO/correct",
     "src_files": [
       "md.c",
       "local_support.c"
@@ -803,8 +803,8 @@
     "function": "merge",
     "kernel": "sort/merge",
     "bug_type": "INIT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_INIT_bug_INIT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_INIT_bug_INIT/correct",
+    "buggy_dir": "benchmarks/hls/merge_INIT_bug_INIT/buggy",
+    "correct_dir": "benchmarks/hls/merge_INIT_bug_INIT/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -820,8 +820,8 @@
     "function": "merge",
     "kernel": "sort/merge",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/merge_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/merge_MLU_bug_MLU/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -837,8 +837,8 @@
     "function": "merge",
     "kernel": "sort/merge",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/merge_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/merge_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/merge_OOB_bug_OOB/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -854,8 +854,8 @@
     "function": "ms_mergesort",
     "kernel": "sort/merge",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ms_mergesort_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ms_mergesort_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/ms_mergesort_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/ms_mergesort_MLU_bug_MLU/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -871,8 +871,8 @@
     "function": "ss_sort",
     "kernel": "sort/radix",
     "bug_type": "INIT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_INIT_bug_INIT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_INIT_bug_INIT/correct",
+    "buggy_dir": "benchmarks/hls/ss_sort_INIT_bug_INIT/buggy",
+    "correct_dir": "benchmarks/hls/ss_sort_INIT_bug_INIT/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -888,8 +888,8 @@
     "function": "ss_sort",
     "kernel": "sort/radix",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/ss_sort_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/ss_sort_MLU_bug_MLU/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -905,8 +905,8 @@
     "function": "ss_sort",
     "kernel": "sort/radix",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/ss_sort_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/ss_sort_OOB_bug_OOB/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -922,8 +922,8 @@
     "function": "ss_sort",
     "kernel": "sort/radix",
     "bug_type": "SHFT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_SHFT_bug_SHFT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_SHFT_bug_SHFT/correct",
+    "buggy_dir": "benchmarks/hls/ss_sort_SHFT_bug_SHFT/buggy",
+    "correct_dir": "benchmarks/hls/ss_sort_SHFT_bug_SHFT/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -939,8 +939,8 @@
     "function": "ss_sort",
     "kernel": "sort/radix",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/ss_sort_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/ss_sort_USE_bug_USE/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -956,8 +956,8 @@
     "function": "ss_sort",
     "kernel": "sort/radix",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/ss_sort_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/ss_sort_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/ss_sort_ZERO_bug_ZERO/correct",
     "src_files": [
       "sort.c",
       "local_support.c"
@@ -973,8 +973,8 @@
     "function": "stencil",
     "kernel": "stencil/stencil2d",
     "bug_type": "INIT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_INIT_bug_INIT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_INIT_bug_INIT/correct",
+    "buggy_dir": "benchmarks/hls/stencil_INIT_bug_INIT/buggy",
+    "correct_dir": "benchmarks/hls/stencil_INIT_bug_INIT/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -990,8 +990,8 @@
     "function": "stencil",
     "kernel": "stencil/stencil2d",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/stencil_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/stencil_MLU_bug_MLU/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -1007,8 +1007,8 @@
     "function": "stencil",
     "kernel": "stencil/stencil2d",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/stencil_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/stencil_OOB_bug_OOB/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -1024,8 +1024,8 @@
     "function": "stencil",
     "kernel": "stencil/stencil2d",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/stencil_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/stencil_ZERO_bug_ZERO/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -1041,8 +1041,8 @@
     "function": "stencil3d",
     "kernel": "stencil/stencil3d",
     "bug_type": "BUF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_BUF_bug_BUF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_BUF_bug_BUF/correct",
+    "buggy_dir": "benchmarks/hls/stencil3d_BUF_bug_BUF/buggy",
+    "correct_dir": "benchmarks/hls/stencil3d_BUF_bug_BUF/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -1058,8 +1058,8 @@
     "function": "stencil3d",
     "kernel": "stencil/stencil3d",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/stencil3d_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/stencil3d_INF_bug_INF/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -1075,8 +1075,8 @@
     "function": "stencil3d",
     "kernel": "stencil/stencil3d",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/stencil3d_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/stencil3d_MLU_bug_MLU/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -1092,8 +1092,8 @@
     "function": "stencil3d",
     "kernel": "stencil/stencil3d",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/stencil3d_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/stencil3d_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/stencil3d_OOB_bug_OOB/correct",
     "src_files": [
       "stencil.c",
       "local_support.c"
@@ -1109,8 +1109,8 @@
     "function": "viterbi",
     "kernel": "viterbi/viterbi",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/viterbi_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/viterbi_INF_bug_INF/correct",
     "src_files": [
       "viterbi.c",
       "local_support.c"
@@ -1126,8 +1126,8 @@
     "function": "viterbi",
     "kernel": "viterbi/viterbi",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/viterbi_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/viterbi_MLU_bug_MLU/correct",
     "src_files": [
       "viterbi.c",
       "local_support.c"
@@ -1143,8 +1143,8 @@
     "function": "viterbi",
     "kernel": "viterbi/viterbi",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/viterbi_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/viterbi_OOB_bug_OOB/correct",
     "src_files": [
       "viterbi.c",
       "local_support.c"
@@ -1160,8 +1160,8 @@
     "function": "viterbi",
     "kernel": "viterbi/viterbi",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/viterbi_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/viterbi_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/viterbi_ZERO_bug_ZERO/correct",
     "src_files": [
       "viterbi.c",
       "local_support.c"
@@ -1177,8 +1177,8 @@
     "function": "kernel_2mm",
     "kernel": "linear-algebra/kernels/2mm/2mm.c",
     "bug_type": "BUF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_BUF_bug_BUF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_BUF_bug_BUF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_2mm_BUF_bug_BUF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_2mm_BUF_bug_BUF/correct",
     "src_files": [
       "2mm.c"
     ],
@@ -1194,8 +1194,8 @@
     "function": "kernel_2mm",
     "kernel": "linear-algebra/kernels/2mm/2mm.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_2mm_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_2mm_INF_bug_INF/correct",
     "src_files": [
       "2mm.c"
     ],
@@ -1211,8 +1211,8 @@
     "function": "kernel_2mm",
     "kernel": "linear-algebra/kernels/2mm/2mm.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_2mm_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_2mm_MLU_bug_MLU/correct",
     "src_files": [
       "2mm.c"
     ],
@@ -1228,8 +1228,8 @@
     "function": "kernel_2mm",
     "kernel": "linear-algebra/kernels/2mm/2mm.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_2mm_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_2mm_USE_bug_USE/correct",
     "src_files": [
       "2mm.c"
     ],
@@ -1245,8 +1245,8 @@
     "function": "kernel_2mm",
     "kernel": "linear-algebra/kernels/2mm/2mm.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_2mm_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_2mm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_2mm_ZERO_bug_ZERO/correct",
     "src_files": [
       "2mm.c"
     ],
@@ -1262,8 +1262,8 @@
     "function": "kernel_3mm",
     "kernel": "linear-algebra/kernels/3mm/3mm.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_3mm_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_3mm_INF_bug_INF/correct",
     "src_files": [
       "3mm.c"
     ],
@@ -1279,8 +1279,8 @@
     "function": "kernel_3mm",
     "kernel": "linear-algebra/kernels/3mm/3mm.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_3mm_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_3mm_MLU_bug_MLU/correct",
     "src_files": [
       "3mm.c"
     ],
@@ -1296,8 +1296,8 @@
     "function": "kernel_3mm",
     "kernel": "linear-algebra/kernels/3mm/3mm.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_3mm_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_3mm_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_3mm_USE_bug_USE/correct",
     "src_files": [
       "3mm.c"
     ],
@@ -1313,8 +1313,8 @@
     "function": "kernel_bicg",
     "kernel": "linear-algebra/kernels/bicg/bicg.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_bicg_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_bicg_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_bicg_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_bicg_USE_bug_USE/correct",
     "src_files": [
       "bicg.c"
     ],
@@ -1330,8 +1330,8 @@
     "function": "kernel_correlation",
     "kernel": "datamining/correlation/correlation.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_correlation_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_correlation_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_correlation_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_correlation_INF_bug_INF/correct",
     "src_files": [
       "correlation.c"
     ],
@@ -1347,8 +1347,8 @@
     "function": "kernel_covariance",
     "kernel": "datamining/covariance/covariance.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_covariance_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_covariance_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_covariance_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_covariance_USE_bug_USE/correct",
     "src_files": [
       "covariance.c"
     ],
@@ -1364,8 +1364,8 @@
     "function": "kernel_doitgen",
     "kernel": "linear-algebra/kernels/doitgen/doitgen.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_doitgen_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_doitgen_INF_bug_INF/correct",
     "src_files": [
       "doitgen.c"
     ],
@@ -1381,8 +1381,8 @@
     "function": "kernel_doitgen",
     "kernel": "linear-algebra/kernels/doitgen/doitgen.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_doitgen_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_doitgen_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_doitgen_MLU_bug_MLU/correct",
     "src_files": [
       "doitgen.c"
     ],
@@ -1398,8 +1398,8 @@
     "function": "kernel_durbin",
     "kernel": "linear-algebra/solvers/durbin/durbin.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_durbin_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_durbin_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_durbin_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_durbin_INF_bug_INF/correct",
     "src_files": [
       "durbin.c"
     ],
@@ -1415,8 +1415,8 @@
     "function": "kernel_fdtd_2d",
     "kernel": "stencils/fdtd-2d/fdtd-2d.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_fdtd_2d_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_fdtd_2d_INF_bug_INF/correct",
     "src_files": [
       "fdtd-2d.c"
     ],
@@ -1432,8 +1432,8 @@
     "function": "kernel_fdtd_2d",
     "kernel": "stencils/fdtd-2d/fdtd-2d.c",
     "bug_type": "INIT",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INIT_bug_INIT/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_INIT_bug_INIT/correct",
+    "buggy_dir": "benchmarks/hls/kernel_fdtd_2d_INIT_bug_INIT/buggy",
+    "correct_dir": "benchmarks/hls/kernel_fdtd_2d_INIT_bug_INIT/correct",
     "src_files": [
       "fdtd-2d.c"
     ],
@@ -1449,8 +1449,8 @@
     "function": "kernel_fdtd_2d",
     "kernel": "stencils/fdtd-2d/fdtd-2d.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_fdtd_2d_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_fdtd_2d_MLU_bug_MLU/correct",
     "src_files": [
       "fdtd-2d.c"
     ],
@@ -1466,8 +1466,8 @@
     "function": "kernel_fdtd_2d",
     "kernel": "stencils/fdtd-2d/fdtd-2d.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_fdtd_2d_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_fdtd_2d_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_fdtd_2d_ZERO_bug_ZERO/correct",
     "src_files": [
       "fdtd-2d.c"
     ],
@@ -1483,8 +1483,8 @@
     "function": "kernel_gemm",
     "kernel": "linear-algebra/blas/gemm/gemm.c",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemm_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemm_OOB_bug_OOB/correct",
     "src_files": [
       "gemm.c"
     ],
@@ -1500,8 +1500,8 @@
     "function": "kernel_gemm",
     "kernel": "linear-algebra/blas/gemm/gemm.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemm_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemm_USE_bug_USE/correct",
     "src_files": [
       "gemm.c"
     ],
@@ -1517,8 +1517,8 @@
     "function": "kernel_gemm",
     "kernel": "linear-algebra/blas/gemm/gemm.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemm_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemm_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemm_ZERO_bug_ZERO/correct",
     "src_files": [
       "gemm.c"
     ],
@@ -1534,8 +1534,8 @@
     "function": "kernel_gemver",
     "kernel": "linear-algebra/blas/gemver/gemver.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemver_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemver_INF_bug_INF/correct",
     "src_files": [
       "gemver.c"
     ],
@@ -1551,8 +1551,8 @@
     "function": "kernel_gemver",
     "kernel": "linear-algebra/blas/gemver/gemver.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemver_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemver_MLU_bug_MLU/correct",
     "src_files": [
       "gemver.c"
     ],
@@ -1568,8 +1568,8 @@
     "function": "kernel_gemver",
     "kernel": "linear-algebra/blas/gemver/gemver.c",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemver_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemver_OOB_bug_OOB/correct",
     "src_files": [
       "gemver.c"
     ],
@@ -1585,8 +1585,8 @@
     "function": "kernel_gemver",
     "kernel": "linear-algebra/blas/gemver/gemver.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemver_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemver_USE_bug_USE/correct",
     "src_files": [
       "gemver.c"
     ],
@@ -1602,8 +1602,8 @@
     "function": "kernel_gemver",
     "kernel": "linear-algebra/blas/gemver/gemver.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gemver_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gemver_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gemver_ZERO_bug_ZERO/correct",
     "src_files": [
       "gemver.c"
     ],
@@ -1619,8 +1619,8 @@
     "function": "kernel_gesummv",
     "kernel": "linear-algebra/blas/gesummv/gesummv.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gesummv_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gesummv_MLU_bug_MLU/correct",
     "src_files": [
       "gesummv.c"
     ],
@@ -1636,8 +1636,8 @@
     "function": "kernel_gesummv",
     "kernel": "linear-algebra/blas/gesummv/gesummv.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gesummv_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gesummv_USE_bug_USE/correct",
     "src_files": [
       "gesummv.c"
     ],
@@ -1653,8 +1653,8 @@
     "function": "kernel_gesummv",
     "kernel": "linear-algebra/blas/gesummv/gesummv.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gesummv_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gesummv_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gesummv_ZERO_bug_ZERO/correct",
     "src_files": [
       "gesummv.c"
     ],
@@ -1670,8 +1670,8 @@
     "function": "kernel_gramschmidt",
     "kernel": "linear-algebra/solvers/gramschmidt/gramschmidt.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gramschmidt_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_gramschmidt_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_gramschmidt_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_gramschmidt_USE_bug_USE/correct",
     "src_files": [
       "gramschmidt.c"
     ],
@@ -1687,8 +1687,8 @@
     "function": "kernel_jacobi_1d_imper",
     "kernel": "stencils/jacobi-1d/jacobi-1d.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_1d_imper_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_1d_imper_INF_bug_INF/correct",
     "src_files": [
       "jacobi-1d.c"
     ],
@@ -1704,8 +1704,8 @@
     "function": "kernel_jacobi_1d_imper",
     "kernel": "stencils/jacobi-1d/jacobi-1d.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_1d_imper_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_1d_imper_MLU_bug_MLU/correct",
     "src_files": [
       "jacobi-1d.c"
     ],
@@ -1721,8 +1721,8 @@
     "function": "kernel_jacobi_1d_imper",
     "kernel": "stencils/jacobi-1d/jacobi-1d.c",
     "bug_type": "OOB",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_OOB_bug_OOB/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_OOB_bug_OOB/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_1d_imper_OOB_bug_OOB/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_1d_imper_OOB_bug_OOB/correct",
     "src_files": [
       "jacobi-1d.c"
     ],
@@ -1738,8 +1738,8 @@
     "function": "kernel_jacobi_1d_imper",
     "kernel": "stencils/jacobi-1d/jacobi-1d.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_1d_imper_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_1d_imper_USE_bug_USE/correct",
     "src_files": [
       "jacobi-1d.c"
     ],
@@ -1755,8 +1755,8 @@
     "function": "kernel_jacobi_1d_imper",
     "kernel": "stencils/jacobi-1d/jacobi-1d.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_1d_imper_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_1d_imper_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_1d_imper_ZERO_bug_ZERO/correct",
     "src_files": [
       "jacobi-1d.c"
     ],
@@ -1772,8 +1772,8 @@
     "function": "kernel_jacobi_2d_imper",
     "kernel": "stencils/jacobi-2d/jacobi-2d.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_2d_imper_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_2d_imper_INF_bug_INF/correct",
     "src_files": [
       "jacobi-2d.c"
     ],
@@ -1789,8 +1789,8 @@
     "function": "kernel_jacobi_2d_imper",
     "kernel": "stencils/jacobi-2d/jacobi-2d.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_2d_imper_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_2d_imper_MLU_bug_MLU/correct",
     "src_files": [
       "jacobi-2d.c"
     ],
@@ -1806,8 +1806,8 @@
     "function": "kernel_jacobi_2d_imper",
     "kernel": "stencils/jacobi-2d/jacobi-2d.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_jacobi_2d_imper_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_jacobi_2d_imper_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_jacobi_2d_imper_ZERO_bug_ZERO/correct",
     "src_files": [
       "jacobi-2d.c"
     ],
@@ -1823,8 +1823,8 @@
     "function": "kernel_mvt",
     "kernel": "linear-algebra/kernels/mvt/mvt.c",
     "bug_type": "INF",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_INF_bug_INF/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_INF_bug_INF/correct",
+    "buggy_dir": "benchmarks/hls/kernel_mvt_INF_bug_INF/buggy",
+    "correct_dir": "benchmarks/hls/kernel_mvt_INF_bug_INF/correct",
     "src_files": [
       "mvt.c"
     ],
@@ -1840,8 +1840,8 @@
     "function": "kernel_mvt",
     "kernel": "linear-algebra/kernels/mvt/mvt.c",
     "bug_type": "MLU",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_MLU_bug_MLU/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_MLU_bug_MLU/correct",
+    "buggy_dir": "benchmarks/hls/kernel_mvt_MLU_bug_MLU/buggy",
+    "correct_dir": "benchmarks/hls/kernel_mvt_MLU_bug_MLU/correct",
     "src_files": [
       "mvt.c"
     ],
@@ -1857,8 +1857,8 @@
     "function": "kernel_mvt",
     "kernel": "linear-algebra/kernels/mvt/mvt.c",
     "bug_type": "USE",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_USE_bug_USE/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_USE_bug_USE/correct",
+    "buggy_dir": "benchmarks/hls/kernel_mvt_USE_bug_USE/buggy",
+    "correct_dir": "benchmarks/hls/kernel_mvt_USE_bug_USE/correct",
     "src_files": [
       "mvt.c"
     ],
@@ -1874,8 +1874,8 @@
     "function": "kernel_mvt",
     "kernel": "linear-algebra/kernels/mvt/mvt.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_mvt_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_mvt_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_mvt_ZERO_bug_ZERO/correct",
     "src_files": [
       "mvt.c"
     ],
@@ -1891,8 +1891,8 @@
     "function": "kernel_syr2k",
     "kernel": "linear-algebra/blas/syr2k/syr2k.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syr2k_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syr2k_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_syr2k_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_syr2k_ZERO_bug_ZERO/correct",
     "src_files": [
       "syr2k.c"
     ],
@@ -1908,8 +1908,8 @@
     "function": "kernel_syrk",
     "kernel": "linear-algebra/blas/syrk/syrk.c",
     "bug_type": "ZERO",
-    "buggy_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syrk_ZERO_bug_ZERO/buggy",
-    "correct_dir": "/home/mmastora6051/iccd2026/benchmarks/hls/kernel_syrk_ZERO_bug_ZERO/correct",
+    "buggy_dir": "benchmarks/hls/kernel_syrk_ZERO_bug_ZERO/buggy",
+    "correct_dir": "benchmarks/hls/kernel_syrk_ZERO_bug_ZERO/correct",
     "src_files": [
       "syrk.c"
     ],
