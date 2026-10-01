@@ -139,32 +139,36 @@ a direction for future work (mutation-aware test generation).
 ## Reproducing from pre-built results
 
 The `results/` directory contains the exact JSON outputs from our GPT-4o
-runs (September 2025). To reproduce the paper's statistics without re-running
-the LLM, which requires no API key:
+runs (September 2025). To reproduce the paper's statistics without re-running the LLM, run the snippet below. No API key, compiler, or dependencies beyond Python 3 (standard library) are needed.
 
-```bash
-git clone https://github.com/mmastora933/hls-repair-benchmark.git
-cd hls-repair-benchmark
-python3 -c "
-import json
-hls = json.load(open('results/hls_results_full.json'))
-...
-"
+To reproduce the paper's statistics without re-running
+the LLM:
+
+```python
+import json, numpy as np
+
+hls = json.load(open("results/hls_results_full.json"))
+
+hls_rates = [r["repair_success_rate"] for r in hls if "repair_success_rate" in r]
+hls_mult  = [r["solution_multiplicity"] for r in hls if "solution_multiplicity" in r]
+
+print("Repair rate:          ", f"{sum(hls_rates)/len(hls_rates):.3f}")
+print("Solution multiplicity:", f"{sum(hls_mult)/len(hls_mult):.3f}")
+print("Instances:            ", len(hls_rates))
 ```
+
 ---
 
 ## Citation
 
-The paper is not yet indexed. In the meantime, please cite this repository directly:
-
 ```bibtex
-@misc{mastora2026hlsrepair,
+@inproceedings{mastora2026hlsrepair,
   title     = {Executable {HLS} Bug Repair: Benchmarking {LLM}-Based
                Automated Program Repair for High-Level Synthesis},
   author    = {Mastora, Maisha and Sullivan, Dean},
+  booktitle = {Proceedings of the 2026 IEEE International Conference on
+               Computer Design (ICCD)},
   year      = {2026},
-  howpublished = {\url{https://github.com/mmastora933/hls-repair-benchmark}},
-  note      = {ICCD 2026. Paper available in the \texttt{paper/} directory.}
 }
 ```
 
