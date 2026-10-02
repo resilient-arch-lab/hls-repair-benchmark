@@ -161,14 +161,17 @@ print("Instances:            ", len(hls_rates))
 
 ## Citation
 
+The paper is available in this repository at [`paper/mastora2026hlsrepair.pdf`](paper/mastora2026hlsrepair.pdf).
+Until the paper is indexed, please cite this repository directly:
+
 ```bibtex
-@inproceedings{mastora2026hlsrepair,
-  title     = {Executable {HLS} Bug Repair: Benchmarking {LLM}-Based
-               Automated Program Repair for High-Level Synthesis},
-  author    = {Mastora, Maisha and Sullivan, Dean},
-  booktitle = {Proceedings of the 2026 IEEE International Conference on
-               Computer Design (ICCD)},
-  year      = {2026},
+@misc{mastora2026hlsrepair,
+  title  = {Executable {HLS} Bug Repair: Benchmarking {LLM}-Based
+             Automated Program Repair for High-Level Synthesis},
+  author = {Mastora, Maisha and Sullivan, Dean},
+  year   = {2026},
+  url    = {https://github.com/resilient-arch-lab/hls-repair-benchmark},
+  note   = {Paper available in repository at paper/mastora2026hlsrepair.pdf}
 }
 ```
 
